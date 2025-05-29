@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/home/kavia/workspace/code-generation/fundamental-rights-explorer-25310-9510e573/fundamental_rights_explorer"
+}
