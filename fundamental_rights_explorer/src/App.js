@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import RightDetailPage from './pages/RightDetailPage';
 
+// PUBLIC_INTERFACE
 function App() {
   return (
     <div className="app">
@@ -14,20 +18,12 @@ function App() {
           </div>
         </div>
       </nav>
-
       <main>
         <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">fundamental_rights_explorer</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
-          </div>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/right/:id" element={<RightDetailPage />} />
+          </Routes>
         </div>
       </main>
     </div>
